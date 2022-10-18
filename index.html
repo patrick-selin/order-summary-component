@@ -6,25 +6,43 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+    </style>
   <title>Order summary card</title>
 
 
 </head>
 <body>
-  <main>
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
+  <!-- card-container -->
   
-  </main>
+    <main class="card-container">  
+    
+      <!-- card-image -->      
+      <img src="./images/illustration-hero.svg" alt="Image of human listening music">
+
+      <!-- card-content -->
+        <!-- tiedot/kuvaus -->
+        <section class="card-content">
+          <h1>Order Summary</h1>
+          <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
+            device anywhere you like!</p>
+
+        <!-- plan-details -->
+        <div class="plan-details">
+            <img src="./images/icon-music.svg" alt="">
+            <h2>Annual Plan</h2> 
+            <p>$59.99/year</p>
+            <a href="#">Change</a>
+        </div>
+
+        <!-- buttons -->
+        <div class="block">
+          <a href="#"><button class="button-payment">Proceed to Payment</button></a>
+          <a href="#"><button class="button-cancel">Cancel Order</button></a>
+        </div>
+        </section>
+    </main>
+  
 </body>
 </html>
