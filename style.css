@@ -73,7 +73,7 @@ body {
   max-width: 327px;
   border-radius: 1rem;
   background-color: var(--white);
-  margin: 1rem;
+  margin: 1 rem;
   position: relative;
   display: block;
   border-collapse: separate;
@@ -96,7 +96,7 @@ body {
 }
 
 .card-container section > * {
-  margin-bottom: 0.7rem;
+  margin-bottom: 1.3rem;
 }
 
 .card-container .card-content h1 {
@@ -118,19 +118,35 @@ body {
   padding: 1rem;
   font-size: 0.7rem;
   display: flex;
-  align-items: center;
+  align-items: center;  
   justify-content: space-between;
+  width: 100%;
+  
+}
 
+.card-container .plan-details .column {
+    margin-left: -2rem;
 }
 
 .card-container .plan-details img{
     width: 2.8rem;
+    display: inline;
   }
 
-  .card-container .plan-details h2, p {
+.card-container .plan-details h2{
     display: block;
-  }
+    font-size: 0.9rem;
+    font-weight: 900;
+}  
 
+.card-container .plan-details p {
+    font-size: 0.9rem;
+}  
+
+.card-container .plan-details a {
+    font-size: 0.8rem;
+    font-weight: 900;
+}
 
 button {
   border: none;
@@ -142,7 +158,7 @@ button {
 }
 
 .block {
-  display: inline-block;
+  display: block;
 }
 
 .card-container .button-payment {
@@ -155,7 +171,7 @@ button {
 .card-container .button-cancel {
   background-color: var(--white);
   color: var(--desatured-blue);
-  margin-bottom: -0.5rem;
+  margin-bottom: -2.5rem;
 }
 
 @media only screen and (min-width: 376px) {
