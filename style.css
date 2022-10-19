@@ -11,8 +11,6 @@
   --white: hsl(0, 0%, 100%);
 }
 
-
-
 *,
 *::before,
 *::after {
@@ -52,6 +50,13 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  cursor: pointer;
+  color: var(--hover);
+  text-decoration: none;
+  transition: ease-in 0.2s;
+}
+
 body {
   background-color: var(--pale-blue);
   padding: 1rem;
@@ -69,12 +74,12 @@ body {
 }
 
 button {
-    border: none;
-    padding: 0.8rem;
-    width: 100%;
-    text-align: center;
-    font-weight: 700;
-    cursor: pointer;
+  border: none;
+  padding: 0.8rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 /* card-container styling starts */
@@ -176,18 +181,25 @@ button {
 }
 
 .card-container .button-payment:hover {
-    background-color: var(--hover);
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.09);
-    border-radius: 0.6rem;
-    transition: ease-in 0.2s;
-    cursor: pointer;
-  }
+  background-color: var(--hover);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.09);
+  border-radius: 0.6rem;
+  transition: ease-in 0.2s;
+  cursor: pointer;
+}
 
 .card-container .button-cancel {
   background-color: var(--white);
   color: var(--desatured-blue);
   margin-top: 0.5rem;
   margin-bottom: -1rem;
+}
+
+.card-container .button-cancel:hover {
+  color: black;
+  transition: ease-in 0.2s;
+  font-weight: 900;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 410px) {
@@ -217,7 +229,7 @@ button {
   .block {
     width: 100%;
   }
- 
+
   .card-container .plan-details {
     padding: 2rem;
   }
@@ -227,8 +239,8 @@ button {
   }
 
   .card-container .button-cancel {
-    margin-top: 1.5rem;
-    margin-bottom: -0.2rem;               
+    margin-top: 1rem;
+    margin-bottom: -0.2rem;
   }
 
   .card-container .plan-details a {
