@@ -2,6 +2,7 @@
   /* primary colors */
   --pale-blue: hsl(225, 100%, 94%);
   --bright-blue: hsl(245, 75%, 52%);
+  --hover: #766cea;
 
   /* neutral colors */
   --very-pale-blue: hsl(225, 100%, 98%);
@@ -10,9 +11,7 @@
   --white: hsl(0, 0%, 100%);
 }
 
-body {
-  background-color: var(--pale-blue);
-}
+
 
 *,
 *::before,
@@ -54,6 +53,8 @@ a {
 }
 
 body {
+  background-color: var(--pale-blue);
+  padding: 1rem;
   height: 100vh;
   line-height: 1.5;
   font-size: 16px;
@@ -67,14 +68,22 @@ body {
   font-family: "Red Hat Display", sans-serif;
 }
 
+button {
+    border: none;
+    padding: 0.8rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 /* card-container styling starts */
 
 .card-container {
   max-width: 327px;
   border-radius: 1rem;
   background-color: var(--white);
-  margin: 1 rem;
-  position: relative;
+
   display: block;
   border-collapse: separate;
   overflow: hidden;
@@ -118,43 +127,41 @@ body {
   padding: 1rem;
   font-size: 0.7rem;
   display: flex;
-  align-items: center;  
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-  
 }
 
-.card-container .plan-details .column {
-    margin-left: -2rem;
+.price-container {
+  display: flex;
 }
 
-.card-container .plan-details img{
-    width: 2.8rem;
-    display: inline;
-  }
+.plan-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
-.card-container .plan-details h2{
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 900;
-}  
+.card-container .plan-details img {
+  width: 3rem;
+}
 
-.card-container .plan-details p {
-    font-size: 0.9rem;
-}  
+.plan-price {
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.card-container .plan-details h2 {
+  text-align: left;
+}
 
 .card-container .plan-details a {
-    font-size: 0.8rem;
-    font-weight: 900;
+  font-weight: 900;
 }
 
-button {
-  border: none;
-  padding: 0.8rem;
-  width: 100%;
-  text-align: center;
-  font-weight: 700;
-  cursor: pointer;
+.card-container .plan-details a {
+  text-align: left;
+  font-size: 0.8rem;
 }
 
 .block {
@@ -164,21 +171,67 @@ button {
 .card-container .button-payment {
   background-color: var(--bright-blue);
   color: var(--white);
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 12px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.09);
   border-radius: 0.6rem;
 }
+
+.card-container .button-payment:hover {
+    background-color: var(--hover);
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.09);
+    border-radius: 0.6rem;
+    transition: ease-in 0.2s;
+    cursor: pointer;
+  }
 
 .card-container .button-cancel {
   background-color: var(--white);
   color: var(--desatured-blue);
-  margin-bottom: -2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: -1rem;
 }
 
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 410px) {
   body {
     background-image: url("./images/pattern-background-desktop.svg");
     background-repeat: no-repeat;
     background-color: var(--pale-blue);
     max-width: 1440px;
+  }
+  .card-container {
+    max-width: 450px;
+  }
+
+  .card-container .card-content {
+    padding-left: 3rem;
+  }
+
+  .card-container .card-content h1 {
+    font-size: 1.8rem;
+    padding-top: 2rem;
+  }
+
+  .card-container .card-content p {
+    padding: 0rem 1.2rem 0rem 1.2rem;
+  }
+
+  .block {
+    width: 100%;
+  }
+ 
+  .card-container .plan-details {
+    padding: 2rem;
+  }
+
+  .card-container .plan-details p {
+    font-size: 1rem;
+  }
+
+  .card-container .button-cancel {
+    margin-top: 1.5rem;
+    margin-bottom: -0.2rem;               
+  }
+
+  .card-container .plan-details a {
+    font-size: 1rem;
   }
 }
