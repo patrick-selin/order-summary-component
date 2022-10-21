@@ -234,4 +234,13 @@ button {
   .plan-details a {
     font-size: 0.9rem;
   }
+  .button-payment {
+    
+    margin-bottom: 0.4rem;
+  }
+
+  .button-cancel {
+    
+    margin-bottom: 0.7rem;
+  }
 }
