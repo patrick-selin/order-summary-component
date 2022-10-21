@@ -46,17 +46,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-a {
-  cursor: pointer;
-}
-
-a:hover {
-  cursor: pointer;
-  color: var(--hover);
-  text-decoration: none;
-  transition: ease-in 0.2s;
-}
-
 body {
   background-color: var(--pale-blue);
   padding: 1rem;
@@ -113,20 +102,25 @@ button {
   margin-bottom: 1.3rem;
 }
 
-.card-container .card-content h1 {
+.card-content h1 {
   color: var(--dark-blue);
   padding-top: 0.8rem;
   font-weight: 900;
   font-size: 1.3rem;
 }
 
-.card-container .card-content p {
+.card-content p {
   color: var(--desatured-blue);
   font-weight: 500;
   text-align: center;
 }
 
-.card-container .plan-details {
+#bold {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.plan-details {
   background-color: var(--very-pale-blue);
   border-radius: 0.6rem;
   padding: 1rem;
@@ -139,48 +133,42 @@ button {
 
 .price-container {
   display: flex;
-}
-
-.plan-price {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.card-container .plan-details img {
-  width: 3rem;
+  align-items: center;
 }
 
 .plan-price {
   margin-left: 1rem;
-  text-align: left;
 }
 
-.card-container .plan-details h2 {
-  text-align: left;
-}
-
-.card-container .plan-details a {
-  font-weight: 900;
-}
-
-.card-container .plan-details a {
-  text-align: left;
+.plan-details a {
+  font-weight: 700;
+  margin-left: auto;
   font-size: 0.8rem;
+  cursor: pointer;
+  cursor: pointer;
+  color: var(--bright-blue);
+  font-size: rem;
+  transition: ease-in 0.2s;
+}
+
+.plan-details a:hover {
+  text-decoration: none;
+  color: var(--hover);
 }
 
 .block {
   display: block;
 }
 
-.card-container .button-payment {
+.button-payment {
   background-color: var(--bright-blue);
   color: var(--white);
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.09);
   border-radius: 0.6rem;
 }
 
-.card-container .button-payment:hover {
+.button-payment:hover,
+.button-payment:active {
   background-color: var(--hover);
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.09);
   border-radius: 0.6rem;
@@ -188,14 +176,15 @@ button {
   cursor: pointer;
 }
 
-.card-container .button-cancel {
+.button-cancel {
   background-color: var(--white);
   color: var(--desatured-blue);
   margin-top: 0.5rem;
   margin-bottom: -1rem;
 }
 
-.card-container .button-cancel:hover {
+.button-cancel:hover,
+.button-cancel:focus {
   color: black;
   transition: ease-in 0.2s;
   font-weight: 900;
@@ -213,16 +202,16 @@ button {
     max-width: 450px;
   }
 
-  .card-container .card-content {
+  .card-content {
     padding-left: 3rem;
   }
 
-  .card-container .card-content h1 {
+  .card-content h1 {
     font-size: 1.8rem;
     padding-top: 2rem;
   }
 
-  .card-container .card-content p {
+  .card-content p {
     padding: 0rem 1.2rem 0rem 1.2rem;
   }
 
@@ -230,20 +219,19 @@ button {
     width: 100%;
   }
 
-  .card-container .plan-details {
-    padding: 2rem;
+  .plan-details {
+    padding: 1rem;
   }
 
-  .card-container .plan-details p {
+  .plan-details p {
     font-size: 1rem;
   }
 
-  .card-container .button-cancel {
-    margin-top: 1rem;
-    margin-bottom: -0.2rem;
+  .plan-price {
+    margin-left: 0.5rem;
   }
 
-  .card-container .plan-details a {
-    font-size: 1rem;
+  .plan-details a {
+    font-size: 0.9rem;
   }
 }
